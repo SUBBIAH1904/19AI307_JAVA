@@ -1,44 +1,48 @@
-# Ex.No:3(B) STRING BUFFER IN JAVA
+# Ex.No:3(C)    STRING BUILDER IN JAVA
 
 ## AIM:
-To develop a java program to set the length of the character sequence equal to newLength using stringbuffer class.
-
+To Create a java program to convert string into a character array and display it in a specific format.
 ## ALGORITHM :
 
 1. Initialize `Scanner` and read a string input from the user.
-2. Create a `StringBuffer` object using the input string.
-3. Display the original length and contents of the `StringBuffer`.
-4. Use `setLength(10)` to modify the length of the buffer.
-5. Display the contents of the `StringBuffer` after resizing.
+2. Convert the string to a character array using `toCharArray()`.
+3. Determine the length of the character array.
+4. Loop through the array, printing each character with a comma separator.
+5. Display the character array in the format `[char1, char2, ..., charN]`.
 
 ## PROGRAM:
  ```
-
 Program to implement a class & objects using Java
 Developed by: SUBBIAH S
 RegisterNumber: 212223220111
 
 import java.util.*;
-
 public class Demo{
-
-	public static void main(String[] args)
-	{
-	    Scanner sc=new Scanner(System.in);
-	    String str1=sc.nextLine();
-		StringBuffer str = new StringBuffer(str1);
-		System.out.println("String length = "+ str.length() +" and contains = " + str);
-		str.setLength(10);
-		System.out.println("After setLength() String = "+ str.toString());
-	}
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine();
+        char[] arr = str1.toCharArray();
+        int n = arr.length;
+        System.out.print("[");
+        for(int i =0;i<n;i++){
+            System.out.print(arr[i]);
+            if (i < n - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+    }
 }
-
 ```
+
 
 ## OUTPUT:
 
+![Screenshot 2025-05-09 135323](https://github.com/user-attachments/assets/fbe70b98-607c-43dd-8a93-3a0fac08e7dd)
 
-![Screenshot 2025-05-09 135102](https://github.com/user-attachments/assets/2ca7fb2c-47f4-44a4-aaa9-26c3c2628c35)
 
 ## RESULT:
-Thus the java program to set the length of the character sequence equal to newLength using stringbuffer class executed successfully.
+Thus the java program to convert string into a character array and display it in a specific format executed successfully.
+
+
+
